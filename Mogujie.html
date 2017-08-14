@@ -1,0 +1,3670 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/myStyle.css" />
+		<style type="text/css">
+			#navigation {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				position: fixed;
+				top: 10%;
+				left: 200px;
+				z-index: 1;
+				display: none;
+			}
+			
+			#navigation li {
+				cursor:pointer;
+				width: 60px;
+				height: 45px;
+				line-height: 45px;
+				border-bottom: 1px solid white;
+				text-align: center;
+				background: #808080;
+			}
+			
+			#navigation li.active {
+				background: red;
+			}
+			
+			#navigation li a {
+				color: white;
+			}
+			
+			.navNumber {
+				position: absolute;
+				bottom: 20px;
+				left: 10px;
+				margin-left: 350px;
+			}
+			
+			.navNumber li {
+				width: 20px;
+				height: 20px;
+				background: rgba(255, 255, 255, 0.8);
+				float: left;
+				border-radius: 50%;
+				margin-right: 20px;
+				text-align: center;
+				line-height: 20px;
+				/*color: white;*/
+			}
+			
+			.navNumber li.active {
+				background: pink;
+			}
+			.serve.news{
+				transition: all 1s;
+			}
+			.sidebar{
+				position: fixed;
+				top: 0;
+				right: 0;
+				width: 30px;
+				height: 100%;
+				background: #202020;
+				color: white;
+				font-size: 12px;
+				text-align: center;
+			}
+			.sidebar ul{
+				margin-top: 95px;
+				padding: 4px;
+			}
+			.sidebar li{
+				height: 100px;
+				border-bottom: 1px solid whitesmoke;
+				padding: 5px;
+			}
+			.sidebar li p{
+				height: 20px;
+				width: 20px;
+				margin-top: 10px;
+			}
+			.sidebar li p:nth-child(1){
+				background: url(img/xue.png)no-repeat -274px -228px;
+			}
+			.sidebar li p:nth-child(2){
+				background: url(img/xue.png)no-repeat -274px -197px;
+			}
+			.sidebar li p:nth-child(3){
+				background: url(img/xue.png)no-repeat -274px -166px;
+			}
+			.sidebar li p:nth-child(4){
+				background: url(img/xue.png)no-repeat -274px -135px;
+			}
+			.sidebar li:hover{
+				background: #ef2f23;
+				cursor:pointer;
+			}
+			.sidebar .mtop:hover{
+				background: #ef2f23;
+			}
+			.sidebar .mtop{
+				cursor:pointer;
+				font-size: 18px;
+				border-top: 1px solid whitesmoke;
+				position: absolute;
+				bottom: 50px;
+				left: 0;
+				width: 100%;
+				height: 50px;
+				background: url(img/xue.png)no-repeat -270px -280px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--侧边导航-->
+		<ul id="navigation">
+			<li class="nav">
+				<a>穿搭</a>
+			</li>
+			<li class="nav">
+				<a>专题</a>
+			</li>
+			<li class="nav">
+				<a>优选</a>
+			</li>
+			<li class="nav">
+				<a>品牌</a>
+			</li>
+			<li class="nav">
+				<a>女装</a>
+			</li>
+			<li class="nav">
+				<a>女鞋</a>
+			</li>
+			<li class="nav">
+				<a>男友</a>
+			</li>
+			<li class="nav">
+				<a>包包</a>
+			</li>
+			<li class="nav">
+				<a>内衣</a>
+			</li>
+			<li class="nav">
+				<a>配饰</a>
+			</li>
+			<li class="nav">
+				<a>运动</a>
+			</li>
+			<li class="nav">
+				<a>美妆</a>
+			</li>
+			<li class="nav">
+				<a>家居</a>
+			</li>
+			<li class="nav">
+				<a>母婴</a>
+			</li>
+			<li class="nav">
+				<a>食品</a>
+			</li>
+			<li id="back">
+				<a>back</a>
+			</li>
+		</ul>
+		<!--侧边栏-->
+		<div class="sidebar">
+			<ul>
+				<li><p></p>购物车</li>
+				<li><p></p>优惠券</li>
+				<li><p></p>钱包</li>
+				<li><p></p>足迹</li>
+			</ul>
+				<p class="mtop"></p>
+		</div>
+	
+		<!--顶部-->
+		<div class="full-width top">
+			<div class="with-control">
+				<i class="iconfont">&#xe642;</i>
+				<a href="#">
+					<span>蘑菇街首页</span>
+				</a>
+				<div class="fr">
+					<a href="#" class="no-border-r padding-r">注册</a>
+					<a href="http://portal.mogujie.com/user/login?ptp=1._mf1_1239_15261.0.0.UhhWe&f=mgjlm&acm=3.mf.1_0_0.0.0.0.mf_15261_356451-mfs_9" class=" padding-l">登录</a>
+					<a href="#">
+						<i class="iconfont">&#xe601;</i> 我的订单
+					</a>
+					<a href="#">
+						<i class="iconfont color-fd5d7a">&#xe630;</i> 购物车
+						<div class="news trolley">
+							购物车里没有商品&nbsp;!
+						</div>
+					</a>
+					<a href="#">
+						客户服务
+						<ul class="serve news">
+							<li>消费者服务</li>
+							<li>商家服务</li>
+							<li>规则中心</li>
+						</ul>
+					</a>
+					<a href="#">
+						<i class="iconfont color-ef2f23">&#xe602;</i> 我的小店
+						<!--<ul class="store news">
+							<li>消费者服务</li>
+							<li>商家服务</li>
+							<li>规则中心</li>
+						</ul>-->
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!--搜索-->
+
+		<div class="with-control nav-cont">
+			<div class="log">
+				<img src="img/log.png" />
+			</div>
+			<div class="seach-cont">
+				<input type="text" name="" id="" value="" placeholder="韩版时尚套装" />
+				<button>搜索</button>
+			</div>
+			<div class="fr">
+				<!--<img src="img/log1.png" />-->
+			</div>
+			<div class="seach-nav">
+				<a href="#">春季套装</a>
+				<a href="#">卫衣</a>
+				<a href="#">牛仔裤</a>
+				<a href="#">打底衫</a>
+				<a href="#">单鞋</a>
+				<a href="#">打底裤</a>
+				<a href="#">斜挎包</a>
+				<a href="#">男式外套</a>
+				<a href="#">棒球服</a>
+				<a href="#">连衣裙</a>
+			</div>
+		</div>
+
+		<!--导航区-->
+		<div class="full-width bg ">
+			<div class="with-control classify-cont">
+				<div class="left">
+					<ul>
+						<li class="padding-top">
+							<a href="#">上衣</a>
+							<a href="#">春上新</a>
+							<a href="#">套装</a>
+							<a href="#">卫衣</a>
+
+						</li>
+						<li>
+							<a href="#">裙子</a>
+							<a href="#">初春新品</a>
+							<a href="#">连衣裙</a>
+							<a href="#">美裙套装</a>
+						</li>
+						<li>
+							<a href="#">裤子</a>
+							<a href="#">打底裤</a>
+							<a href="#">小脚裤</a>
+							<a href="#">牛仔裤</a>
+						</li>
+						<li>
+							<a href="#">内衣</a>
+							<a href="#">热销榜</a>
+							<a href="#">睡衣套装</a>
+							<a href="#">内裤</a>
+						</li>
+						<li>
+							<a href="#">女鞋</a>
+							<a href="#">单鞋</a>
+							<a href="#">运动鞋</a>
+							<a href="#">小白鞋</a>
+						</li>
+						<li>
+							<a href="#">男友</a>
+							<a href="#">初春外套</a>
+							<a href="#">牛仔裤</a>
+							<a href="#">应季内搭</a>
+						</li>
+						<li>
+							<a href="#">包包</a>
+							<a href="#">单肩包</a>
+							<a href="#">女包</a>
+							<a href="#">男包</a>
+						</li>
+						<li>
+							<a href="#">运动</a>
+							<a href="#">运动卫衣</a>
+							<a href="#">运动鞋</a>
+							<a href="#">人气套装</a>
+						</li>
+						<li>
+							<a href="#">美妆</a>
+							<a href="#">补水保湿</a>
+							<a href="#">面膜</a>
+							<a href="#">BB霜</a>
+						</li>
+						<li>
+							<a href="#">配饰</a>
+							<a href="#">耳环新品</a>
+							<a href="#">手表</a>
+							<a href="#">墨镜</a>
+						</li>
+						<li>
+							<a href="#">家居</a>
+							<a href="#">新品</a>
+							<a href="#">四件套</a>
+							<a href="#">小家具</a>
+						</li>
+						<li>
+							<a href="#">母婴</a>
+							<a href="#">初春新品</a>
+							<a href="#">童装</a>
+							<a href="#">孕妇装</a>
+						</li>
+						<li>
+							<a href="#">食品</a>
+							<a href="#">休闲食品</a>
+							<a href="#">进口食品</a>
+							<a href="#">肉食</a>
+						</li>
+						<li>
+							<a href="#">电器</a>
+							<a href="#">手机</a>
+							<a href="#">小家电</a>
+							<a href="#">手机配饰</a>
+						</li>
+					</ul>
+				</div>
+				<div class="middle">
+					<div class="wheel">
+						<img src="img/sclid1.png" />
+						<ul class="navNumber">
+							<li class="active">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+						</ul>
+					</div>
+				</div>
+				<div class="right">
+					<div class="top-box">
+						<span class="header"></span>
+						<div class="land-box">
+							<p class="nickname">姑凉好!</p>
+							<p class="welcome">欢迎来光蘑菇街～</p>
+							<a href="http://portal.mogujie.com/user/login?ptp=1._mf1_1239_15261.0.0.UhhWe&f=mgjlm&acm=3.mf.1_0_0.0.0.0.mf_15261_356451-mfs_9" class="land">登陆</a>
+							<a href="http://portal.mogujie.com/user/register?ptp=1._mf1_1239_15261.0.0.UVdq3&f=mgjlm&acm=3.mf.1_0_0.0.0.0.mf_15261_356451-mfs_9" class="enroll">免费注册</a>
+							<a href="http://www.xiaodian.com/user/login?ptp=1._mf1_1239_15261.0.0.UVdq3">开小店</a>
+						</div>
+
+					</div>
+					<div class="bottom-box">
+						<p class="name">美味零食</p>
+						<p>1折起囤美食</p>
+						<img src="img/goods1.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--限时抢购-->
+		<div class="with-control purchase">
+			<div class="shortcut">
+				<div class="shortcut-left">
+					<h3>
+	  	    		<a href="#">限时快抢</a>
+	  	    		</h3>
+					<p>00:55:10</p>
+					<img src="img/shortcut1.png" />
+				</div>
+				<div class="shortcut-right">
+					<div class="right-top">
+						<span><a href="#">一元快抢</a></span>
+						<span><a href="#">整点抢好运</a></span>
+						<img src="img/shortcut2.png" />
+					</div>
+					<div class="right-bottom no-border-b">
+						<span><a href="#">一分钱抽奖</a></span>
+						<span><a href="#">幸运仅需￥0.01</a></span>
+						<img src="img/shortcut3.png" />
+					</div>
+				</div>
+			</div>
+
+			<div class="shortcut">
+				<div class="shortcut-left bg-change">
+					<h3>
+	  	    		<a href="#">限时快抢</a>
+	  	    		</h3>
+					<p>00:55:10</p>
+					<img src="img/shortcut4.png" />
+				</div>
+				<div class="shortcut-right ">
+					<div class="right-top bg-pink">
+						<span><a href="#">一元快抢</a></span>
+						<span><a href="#">整点抢好运</a></span>
+						<img src="img/shortcut5.png" />
+					</div>
+					<div class="right-bottom no-border-b bg-pink">
+						<span><a href="#">一分钱抽奖</a></span>
+						<span><a href="#">幸运仅需￥0.01</a></span>
+						<img src="img/shortcut6.png" />
+					</div>
+				</div>
+			</div>
+
+			<div class="assemble">
+				<h3><a href="#">限时快抢</a></h3>
+				<p>
+					<a href="#">补水大赏 超值囤货</a>
+				</p>
+				<img src="img/shortcut7.png" />
+			</div>
+		</div>
+		<!--红人穿搭-->
+		<div class="with-control dress list">
+			<div class="title-name">
+				<span></span>
+				<h3>红人穿搭</h3>
+				<a href="#">查看全部 ></a>
+			</div>
+
+			<div class="dress-goods">
+				<img src="img/dress_goods1.png" />
+				<a href="#">长腿穿搭法</a>
+			</div>
+
+			<div class="dress-goods">
+				<img src="img/style.png" />
+				<a href="#">小个子私服</a>
+			</div>
+			<div class="dress-goods">
+				<img src="img/style5.png" />
+				<a href="#">春款半身裙</a>
+			</div>
+			<div class="dress-goods">
+				<img src="img/style1.png" />
+				<a href="#">开春元气装</a>
+			</div>
+			<div class="dress-goods">
+				<img src="img/style6.png" />
+				<a href="#">早春韩系装</a>
+			</div>
+
+			<div class="other-wear">
+				<ul>
+					<li>
+						<img src="img/dress_goods7.png" />
+						<a href="#">春寒备开衫</a>
+					</li>
+					<li>
+						<img src="img/dress_goods8.png" />
+						<a href="#">春寒备开衫</a>
+					</li>
+					<li>
+						<img src="img/dress_goods9.png" />
+						<a href="#">春寒备开衫</a>
+					</li>
+					<li>
+						<img src="img/dress_goods10.png" />
+						<a href="#">春寒备开衫</a>
+					</li>
+					<li>
+						<img src="img/dress_goods11.png" />
+						<a href="#">春寒备开衫</a>
+					</li>
+					<li>
+						<img src="img/dress_goods7.png" />
+						<a href="#">春寒备开衫</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<!--精选专题-->
+		<div class="with-control concentration list">
+			<div class="title-name">
+				<span></span>
+				<h3>精选专题</h3>
+				<ul class="identifier">
+					<li>01</li>
+					<li>02</li>
+					<li>03</li>
+					<li>04</li>
+					<li>05</li>
+				</ul>
+			</div>
+			<div class="concentration-goods concentration-goods1">
+				<div class="frame-big">
+					<img src="img/concentration_goods3.png" />
+				</div>
+				<ul class="frame-sm">
+					<li>
+						<img src="img/concentration_goods_sm1.png" />
+						<a href="#">￥59.50</a>
+					</li>
+					<li>
+						<img src="img/concentration_goods_sm2.png" />
+						<a href="#">￥59.50</a>
+					</li>
+					<li>
+						<img src="img/concentration_goods_sm3.png" />
+						<a href="#">￥69.50</a>
+					</li>
+					<li class="no-m-r">
+						<img src="img/concentration_goods_sm4.png" />
+						<a href="#">￥59.50</a>
+					</li>
+				</ul>
+			</div>
+			<div class="concentration-goods concentration-goods2">
+				<div class="frame-big">
+					<img src="img/concentration_goods3.png" />
+				</div>
+				<ul class="frame-sm">
+					<li>
+						<img src="img/concentration_goods_sm1.png" />
+						<a href="#">￥59.50</a>
+					</li>
+					<li>
+						<img src="img/concentration_goods_sm2.png" />
+						<a href="#">￥59.50</a>
+					</li>
+					<li>
+						<img src="img/concentration_goods_sm3.png" />
+						<a href="#">￥69.50</a>
+					</li>
+					<li class="no-m-r">
+						<img src="img/concentration_goods_sm4.png" />
+						<a href="#">￥59.50</a>
+					</li>
+				</ul>
+			</div>
+			<div class="concentration-goods concentration-goods3">
+				<div class="frame-big">
+					<img src="img/concentration_goods3.png" />
+				</div>
+				<ul class="frame-sm">
+					<li>
+						<img src="img/concentration_goods_sm1.png" />
+						<a href="#">￥59.50</a>
+					</li>
+					<li>
+						<img src="img/concentration_goods_sm2.png" />
+						<a href="#">￥59.50</a>
+					</li>
+					<li>
+						<img src="img/concentration_goods_sm3.png" />
+						<a href="#">￥69.50</a>
+					</li>
+					<li class="no-m-r">
+						<img src="img/concentration_goods_sm4.png" />
+						<a href="#">￥59.50</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="Fashion-element">
+				<h2>流行元素</h2>
+				<ul>
+					<li>
+						<img src="img/concentration_goods_sm1.png" />
+						<a href="#">薄外套</a>
+					</li>
+					<li>
+						<img src="img/concentration_goods_sm1.png" />
+						<a href="#">薄外套</a>
+					</li>
+					<li class="no-m-r">
+						<img src="img/concentration_goods_sm1.png" />
+						<a href="#">卫衣新品榜</a>
+					</li>
+					<li>
+						<img src="img/concentration_goods_sm1.png" />
+						<a href="#">薄外套</a>
+					</li>
+					<li>
+						<img src="img/concentration_goods_sm1.png" />
+						<a href="#">薄外套</a>
+					</li>
+					<li class="no-m-r">
+						<img src="img/concentration_goods_sm1.png" />
+						<a href="#">薄外套</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--蘑菇优选-->
+		<div class="with-control preference list">
+			<div class="title-name">
+				<span></span>
+				<h3>蘑菇优选</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							居家
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							个护
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							美妆
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							穿搭
+						</a>
+					</li>
+					<li class="no-border-r">
+						<a href="#">
+							餐厨
+						</a>
+					</li>
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods effect">
+				<li>
+					<div class="assortment">
+						<a href="#">亲肤毛巾</a>
+						<a href="#">四件套</a>
+						<a href="#" class="no-m-r">天然沐浴</a>
+						<a href="#">精油护肤</a>
+						<a href="#">内衣套装</a>
+						<a href="#" class="no-m-r">典雅餐具</a>
+					</div>
+					<h2><a href="#">蘑菇优选</a></h2>
+					<a href="#">
+						<p>专注生活美学</p>
+					</a>
+
+					<img src="img/preference_goods1.png" />
+
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>热卖好货</h3></a>
+						<a href="#">
+							<p>TOP超值推荐</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/preference_goods2.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>精选专题</h3></a>
+						<a href="#">
+							<p>百年精油 保湿亮白</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/preference_goods6.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>人气新款</h3></a>
+						<a href="#">
+							<p>美妆新宠 女神必备</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/preference_goods.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>名品制造商</h3></a>
+						<a href="#">
+							<p>MUJI制造商直供</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/preference_goods5.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>新人专享</h3></a>
+						<a href="#">
+							<p>特惠尝鲜9.9元起</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/preference_goods3.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>全球进口</h3></a>
+						<a href="#">
+							<p>让下厨变得更有趣</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/preference_goods4.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>大家都在买</h3>
+					<div class="everybody">
+						<img src="img/preference_goods9.png" />
+						<div class="everybody-infor">
+							<a href="#">蘑菇优选&nbsp;甜橙丁香香薰蜡烛&nbsp;进口植物精油</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥88.00</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/preference_goods11.png" />
+						<div class="everybody-infor">
+							<a href="#">蘑菇优选&nbsp;买一送一藏青格纹百搭棉麻披肩</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥39.00</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/preference_goods13.png" />
+						<div class="everybody-infor">
+							<a href="#">蘑菇优选&nbsp;4双入棉线堆堆袜子&nbsp;半拉毛混色</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥39.00</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/preference_goods14.png" />
+						<div class="everybody-infor">
+							<a href="#">蘑菇优选&nbsp;氧化锆陶瓷水果刀组合装果蔬刀&nbsp;进口植物精油</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥19.90</a>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--品牌-->
+		<div class="with-control preference brand list">
+			<div class="title-name">
+				<span></span>
+				<h3>品牌</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							衣品天成
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							aza
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							森马
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							爱爱丸
+						</a>
+					</li>
+					<li class="no-border-r">
+						<a href="#">
+							匡威
+						</a>
+					</li>
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			<ul class="preference-goods ">
+				<li class="brand-goods">
+					<div class="assortment">
+						<a href="#">衬衫</a>
+						<a href="#">小白鞋</a>
+						<a href="#" class="no-m-r">女包</a>
+						<a href="#">运动鞋</a>
+						<a href="#">春外套</a>
+						<a href="#" class="no-m-r">护肤</a>
+					</div>
+					<a href="#">
+						<h2>品牌精选</h2>
+					</a>
+					<a href="#">
+						<p>潮牌尖货 初春换新</p>
+					</a>
+					<img src="img/brandgood.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>潮流女装</h3></a>
+						<a href="#">
+							<p>春天外套这么穿才好看</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandgoods2_03.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>最IN美妆</h3></a>
+						<a href="#">
+							<p>倾心彩妆大揭秘</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandgoods2_12.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>人气美包</h3></a>
+						<a href="#">
+							<p>小包"袋"你萌动少女心</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandgoods2_05.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>时尚运动</h3></a>
+						<a href="#">
+							<p>型无止境</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandgoods2_13.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>品牌女鞋</h3></a>
+						<a href="#">
+							<p>春鞋漫步 止不住的魅力</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandgoods2_07.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>潮牌男友</h3></a>
+						<a href="#">
+							<p>新品卫衣 潮流入侵</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandgoods2_14.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="breed">
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand8.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand8.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+					</div>
+
+		</li>
+		</ul>
+		</div>
+
+		<!--女装-->
+		<div class="with-control preference women-dress list">
+			<div class="title-name">
+				<span></span>
+				<h3>女装</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							时尚套装
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							牛仔裤
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							连衣裙
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							卫衣
+						</a>
+					</li>
+
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="womenD-goods">
+					<div class="assortment">
+						<a href="#">连衣裙</a>
+						<a href="#">棒球外套</a>
+						<a href="#" class="no-m-r">T恤</a>
+						<a href="#">风衣</a>
+						<a href="#">牛仔外套</a>
+						<a href="#" class="no-m-r">休闲裤</a>
+					</div>
+					<a href="#">
+						<h2>潮流女装</h2></a>
+					<a href="#">
+						<p>初春新品抢先购</p>
+					</a>
+
+					<img src="img/navgoods_03.png" />
+
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>时髦套装</h3></a>
+						<a href="#">
+							<p>这些套装都超级好看</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenD_03.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>春款衬衫</h3></a>
+						<a href="#">
+							<p>学潮人街拍 不是梦</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenD_12.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>人气美裙</h3></a>
+						<a href="#">
+							<p>穿上秒变小仙女儿</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenD_05.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>休闲卫衣</h3></a>
+						<a href="#">
+							<p>想要潮一件就搞定</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenD_13.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>显瘦裤子</h3></a>
+						<a href="#">
+							<p>春款上架 巨显瘦</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenD_07.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>春季外套</h3></a>
+						<a href="#">
+							<p>热门外套 70元起</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/preference_goods2.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="breed">
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand8.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand8.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--女鞋-->
+		<div class="with-control preference women-shoes list">
+			<div class="title-name">
+				<span></span>
+				<h3>女鞋</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							人气美鞋
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							单鞋
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							运动鞋
+						</a>
+					</li>
+
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="womenS-goods">
+					<div class="assortment">
+						<a href="#">粗跟鞋</a>
+						<a href="#">板鞋</a>
+						<a href="#" class="no-m-r">休闲鞋</a>
+						<a href="#">一脚蹬</a>
+						<a href="#">牛津鞋</a>
+						<a href="#" class="no-m-r">尖头鞋</a>
+					</div>
+					<a href="#">
+						<h2>换新美鞋</h2></a>
+					<a href="#">
+						<p>高颜值美鞋 不止3折</p>
+					</a>
+					<img src="img/navgoods_06.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>人气单鞋</h3></a>
+						<a href="#">
+							<p>精挑细选 出街必败吸睛款</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenS_03.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>潮范厚底</h3></a>
+						<a href="#">
+							<p>秒变大长腿 新品直降300</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenS_12.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>"星"款小白鞋</h3></a>
+						<a href="#">
+							<p>搭出你的百变风格</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenS_05.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>减龄帆布</h3></a>
+						<a href="#">
+							<p>街拍明星极力推荐 青春百搭</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenS_13.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>青春运动</h3></a>
+						<a href="#">
+							<p>春季出游首选 舒适不累脚</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenS_07.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>名媛高跟</h3></a>
+						<a href="#">
+							<p>女神修炼款 网红都在抢</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/womenS_14.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>大家都在买</h3>
+					<div class="everybody">
+						<img src="img/body_03.png" />
+						<div class="everybody-infor">
+							<a href="#">英伦风新款时尚厚底内增高单鞋学生鞋镜</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥157.50</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_06.png" />
+						<div class="everybody-infor">
+							<a href="#">【加绒】2016年冬季新款韩版舒适细带粗跟</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥69.30</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_08.png" />
+						<div class="everybody-infor">
+							<a href="#">【纯羊毛】超暖棉鞋冬季新款加绒豆豆鞋</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥59.50</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_10.png" />
+						<div class="everybody-infor">
+							<a href="#">韩版春季新款学院风拼色厚底小白鞋女运动鞋</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥79.80</a>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--男友-->
+		<div class="with-control preference man list">
+			<div class="title-name">
+				<span></span>
+				<h3>男友</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							上衣
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							型裤
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							潮鞋
+						</a>
+					</li>
+					<li class="no-border-r">
+						<a href="#">
+							贴身私物
+						</a>
+					</li>
+
+					<li class="last-child ">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="man-goods">
+					<div class="assortment">
+						<a href="#">内搭</a>
+						<a href="#">T恤</a>
+						<a href="#" class="no-m-r">牛仔系列</a>
+						<a href="#">板鞋</a>
+						<a href="#">情侣装</a>
+						<a href="#" class="no-m-r">帆布鞋</a>
+					</div>
+					<a href="#">
+						<h2>绝配男友</h2></a>
+					<a href="#">
+						<p>3折起 全宇宙时髦单品</p>
+					</a>
+					<img src="img/navgoods_08.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>火了10年的夹克</h3></a>
+						<a href="#">
+							<p>人气热销 IN季必备3折起</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandsgoods_03.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>牛仔裤让人上瘾</h3></a>
+						<a href="#">
+							<p>只要￥49 长腿秘籍秒变1米8</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandsgoods_12.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>时尚先锋の卫衣</h3></a>
+						<a href="#">
+							<p>甩掉矜持 39元潮男优选</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandsgoods_05.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>帆布鞋，超值经典</h3></a>
+						<a href="#">
+							<p>买了1万双都不够0%买错率</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandsgoods_13.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>99%男生都会买</h3></a>
+						<a href="#">
+							<p>新锐好鞋TOP榜 直降￥100</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandsgoods_07.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>一件衬衫穿四季</h3></a>
+						<a href="#">
+							<p>收藏量破10000+的抢手货</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/brandsgoods_14.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>大家都在买</h3>
+					<div class="everybody">
+						<img src="img/body_12.png" />
+						<div class="everybody-infor">
+							<a href="#">2017冬装新款香蕉刺绣棉衣保暖加厚男外套</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥129.50</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_14.png" />
+						<div class="everybody-infor">
+							<a href="#">2016冬装新款男士个性小字母毛衣韩版休闲上衣</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥98.00</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_16.png" />
+						<div class="everybody-infor">
+							<a href="#">冬季保暖加绒棉鞋低帮纯色潮男商务平底鞋</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥69.00</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_18.png" />
+						<div class="everybody-infor">
+							<a href="#">LR加绒韩版秋冬新款圆领男加厚印花卫衣</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥69.30</a>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--包包-->
+		<div class="with-control preference bag list">
+			<div class="title-name">
+				<span></span>
+				<h3>包包</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							学院双肩
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							短款钱包
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							刺绣徽章
+						</a>
+					</li>
+					<li class="no-border-r">
+						<a href="#">
+							男士手拿包
+						</a>
+					</li>
+
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="bag-goods">
+					<div class="assortment">
+						<a href="#">衬衫</a>
+						<a href="#">小白鞋</a>
+						<a href="#" class="no-m-r">女包</a>
+						<a href="#">运动鞋</a>
+						<a href="#">春外套</a>
+						<a href="#" class="no-m-r">护肤</a>
+					</div>
+					<a href="#">
+						<h2>品牌精选</h2></a>
+					<a href="#">
+						<p>潮牌尖货 初春换新</p>
+					</a>
+					<img src="img/navgoods_10.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>斜挎包</h3></a>
+						<a href="#">
+							<p>17新款 全新来袭</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_18.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>单肩包</h3></a>
+						<a href="#">
+							<p>解放双手 尽在单肩包</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_24.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>双肩包</h3></a>
+						<a href="#">
+							<p>踏春必备 必备双肩包</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_19.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>拉杆箱</h3></a>
+						<a href="#">
+							<p>旅行好伴侣 品质拉杆箱</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_25.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>手提包</h3></a>
+						<a href="#">
+							<p>印花元素 多彩手提包</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_20.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>钱包</h3></a>
+						<a href="#">
+							<p>买款钱包 给钱一个交代</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_26.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>大家都在买</h3>
+					<div class="everybody">
+						<img src="img/body_20.png" />
+						<div class="everybody-infor">
+							<a href="#">新款印花女包手提包大包街头休闲单肩斜挎包</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥59.00</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_22.png" />
+						<div class="everybody-infor">
+							<a href="#">刘涛欢乐颂安迪同款新款铂金扣时尚钱包</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥39.90</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_24.png" />
+						<div class="everybody-infor">
+							<a href="#">买一送三 秋冬新款韩版简约皮带装饰女包</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥64.99</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_26.png" />
+						<div class="everybody-infor">
+							<a href="#">代代花枳包包新款磨砂斜挎包女链条小方包</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥49.90</a>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--内衣-->
+		<div class="with-control preference underwaist list">
+			<div class="title-name">
+				<span></span>
+				<h3>内衣</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							文胸
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							无钢圈内衣
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							隐形文胸
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							卡通内裤
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							安全裤
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							塑身衣
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							吊带背心
+						</a>
+					</li>
+					<li class="no-border-r">
+						<a href="#">
+							抹胸
+						</a>
+					</li>
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="underwaist-goods">
+					<div class="assortment">
+						<a href="#">无痕内衣</a>
+						<a href="#">调整内衣</a>
+						<a href="#" class="no-m-r">性感睡衣</a>
+						<a href="#">情侣睡衣</a>
+						<a href="#">船袜</a>
+						<a href="#" class="no-m-r">堆堆袜</a>
+					</div>
+					<a href="#">
+						<h2>性感内衣</h2></a>
+					<a href="#">
+						<p>开春焕新</p>
+					</a>
+					<img src="img/navgoods_12.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>少女文胸7折焕新</h3></a>
+						<a href="#">
+							<p>这些罩罩好穿又好看</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_30.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>百搭神奇美袜</h3></a>
+						<a href="#">
+							<p>不露一截袜子怎么时髦</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_36.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>睡衣也要美上天</h3></a>
+						<a href="#">
+							<p>春季睡衣时髦开售</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_31.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>开春甩肉装备</h3></a>
+						<a href="#">
+							<p>2017运动不偷懒</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_37.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>直男躺到款</h3></a>
+						<a href="#">
+							<p>舒适甜美醒内裤29元起</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_32.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>随性睡裙宅家更性感</h3></a>
+						<a href="#">
+							<p>开启宅家模式</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_38.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>大家都在买</h3>
+					<div class="everybody">
+						<img src="img/body_28.png" />
+						<div class="everybody-infor">
+							<a href="#">[圆满]秋冬加厚法兰绒情侣睡衣 女式睡衣</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥59.89</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_34.png" />
+						<div class="everybody-infor">
+							<a href="#">[5双装]小清新纯棉女式短袜浅口袜透气女式袜</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥19.46</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_30.png" />
+						<div class="everybody-infor">
+							<a href="#">3条装冰丝内裤女档部纯棉/全棉 无痕提臀</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥29.89</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_32.png" />
+						<div class="everybody-infor">
+							<a href="#">新款拉丝无痕无钢圈前排NB文胸一片式</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥39.90</a>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--配饰-->
+		<div class="with-control preference ornament list">
+			<div class="title-name">
+				<span></span>
+				<h3>配饰</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							手表
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							珍珠耳环
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							银饰
+						</a>
+					</li>
+
+					<li class="no-border-r">
+						<a href="#">
+							猫眼太阳镜
+						</a>
+					</li>
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="ornament-goods">
+					<div class="assortment">
+						<a href="#">框架眼睛</a>
+						<a href="#">棒球帽</a>
+						<a href="#" class="no-m-r">戒指</a>
+						<a href="#">耳饰</a>
+						<a href="#">锁骨链</a>
+						<a href="#" class="no-m-r">墨镜</a>
+					</div>
+					<a href="#">
+						<h2>出街潮帽</h2></a>
+					<a href="#">
+						<p>优选好货 潮派十足</p>
+					</a>
+					<img src="img/navgoods_14.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>时尚墨镜</h3></a>
+						<a href="#">
+							<p>与女神只差一幅墨镜</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_42.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>迷人项链</h3></a>
+						<a href="#">
+							<p>让你"颈"上添花</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_48.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>手表上新</h3></a>
+						<a href="#">
+							<p>手腕上的性感与优雅</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_43.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>女神手链</h3></a>
+						<a href="#">
+							<p>招桃花小物戴起来</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_49.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>珍珠耳环</h3></a>
+						<a href="#">
+							<p>拉高颜值的耳环原来是它</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_44.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>小众情侣戒</h3></a>
+						<a href="#">
+							<p>年轻就要与众不同</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_50.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>大家都在买</h3>
+					<div class="everybody">
+						<img src="img/body_36.png" />
+						<div class="everybody-infor">
+							<a href="#">韩国秋冬天保暖针织毛线帽子潮流男女士套头帽</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥25.90</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_38.png" />
+						<div class="everybody-infor">
+							<a href="#">(14种花式可选)春秋冬雪纺桑蚕丝披肩围巾两用</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥39.20</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_40.png" />
+						<div class="everybody-infor">
+							<a href="#">两团送棒针 多股围巾线男女围巾毛线粗毛线</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥14.99</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_42.png" />
+						<div class="everybody-infor">
+							<a href="#">韩版聚利时手表女学生时尚酒桶行女士手表</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥134.00</a>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--运动-->
+		<div class="with-control preference sport list">
+			<div class="title-name">
+				<span></span>
+				<h3>运动</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							时髦套装
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							小白鞋
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							人气潮鞋
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							瑜伽服
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							性感泳衣
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							减脂神器
+						</a>
+					</li>
+					<li class="no-border-r">
+						<a href="#">
+							花花公子
+						</a>
+					</li>
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="sport-goods">
+					<div class="assortment">
+						<a href="#">运动套装</a>
+						<a href="#">运动鞋</a>
+						<a href="#" class="no-m-r">时尚卫衣</a>
+						<a href="#">瑜伽必备</a>
+						<a href="#">泳装</a>
+						<a href="#" class="no-m-r">小型器材</a>
+					</div>
+					<a href="#">
+						<h2>品牌精选</h2>
+					</a>
+					<a href="#">
+						<p>大牌折扣任你选</p>
+					</a>
+					<img src="img/navgoods_16.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>运动鞋</h3></a>
+						<a href="#">
+							<p>好鞋是运动的动力</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_54.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>Adidas</h3></a>
+						<a href="#">
+							<p>生来好动</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_60.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>瘦身器材</h3></a>
+						<a href="#">
+							<p>瘦身助攻来也</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_55.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>卫衣／外套</h3></a>
+						<a href="#">
+							<p>衣柜必备单品</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_61.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>运动套装</h3></a>
+						<a href="#">
+							<p>修身更显好身材</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_56.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>春品当道</h3></a>
+						<a href="#">
+							<p>始于经典，复刻回潮</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_62.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="breed">
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand8.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand8.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--美妆-->
+		<div class="with-control preference beauty">
+			<div class="title-name">
+				<span></span>
+				<h3>美妆</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							春季保湿
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							素颜霜
+						</a>
+					</li>
+
+					<li class="no-border-r">
+						<a href="#">
+							洗面奶
+						</a>
+					</li>
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods list">
+				<li class="beauty-goods">
+					<div class="assortment">
+						<a href="#">面膜</a>
+						<a href="#">套装</a>
+						<a href="#" class="no-m-r">底妆</a>
+						<a href="#">口红</a>
+						<a href="#">眼妆</a>
+						<a href="#" class="no-m-r">洁面</a>
+					</div>
+					<h2>护肤彩妆</h2>
+					<p>必买清单 低至3折</p>
+					<img src="img/navgoods_18.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<h3>春日水光肌</h3>
+						<p>护肤到位 元气十足</p>
+						<div class="goodsimg">
+							<img src="img/allgoods_66.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<h3>唤醒春日新肌</h3>
+						<p>深层清洁 宛若新生</p>
+						<div class="goodsimg">
+							<img src="img/allgoods_72.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<h3>三生三世桃花妆</h3>
+						<p>妆美邂逅三世情缘</p>
+						<div class="goodsimg">
+							<img src="img/allgoods_67.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<h3>白浅清新底妆</h3>
+						<p>上神气质有妆似无妆</p>
+						<div class="goodsimg">
+							<img src="img/allgoods_73.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<h3>女神个护清单</h3>
+						<p>勾勒曼妙春姿</p>
+						<div class="goodsimg">
+							<img src="img/allgoods_68.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<h3>懒人美体塑形法</h3>
+						<p>瘦瘦瘦 美美美</p>
+						<div class="goodsimg">
+							<img src="img/allgoods_74.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="breed">
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand8.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand8.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand1.png" />
+						</div>
+						<div class="brandName">
+							<img src="img/brand3.png" />
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--家居-->
+		<div class="with-control preference home list">
+			<div class="title-name">
+				<span></span>
+				<h3>家居</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							家纺
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							纸品洗液
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							森马
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							家用电脑
+						</a>
+					</li>
+					<li class="no-border-r">
+						<a href="#">
+							数码
+						</a>
+					</li>
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="home-goods">
+					<div class="assortment">
+						<a href="#">手机周边</a>
+						<a href="#">毛衣浴巾</a>
+						<a href="#" class="no-m-r">四件套</a>
+						<a href="#">纸品洗液</a>
+						<a href="#">家用电器</a>
+						<a href="#" class="no-m-r">抱枕</a>
+					</div>
+					<a href="#">
+						<h2>新春家居</h2></a>
+					<a href="#">
+						<p>让生活更精致</p>
+					</a>
+					<img src="img/navgoods_20.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>品质好床品</h3></a>
+						<a href="#">
+							<p>让睡觉成为真正的享受</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_78.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>趣味餐具</h3></a>
+						<a href="#">
+							<p>让吃与喝变得更有趣</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_84.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>创意礼物</h3></a>
+						<a href="#">
+							<p>好礼物，只为最真的心意</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_79.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>美容电器</h3></a>
+						<a href="#">
+							<p>精致生活从变美开始</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_85.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>新春装饰</h3></a>
+						<a href="#">
+							<p>给家换点不一样的颜色</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_80.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>大牌手机</h3></a>
+						<a href="#">
+							<p>换新机正当时</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_86.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>大家都在买</h3>
+					<div class="everybody">
+						<img src="img/body_44.png" />
+						<div class="everybody-infor">
+							<a href="#">纳盒 双层抽屉式内衣收纳箱衣物储物箱</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥26.90</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_46.png" />
+						<div class="everybody-infor">
+							<a href="#">保暖澳洲羊毛被春秋被冬被羊绒被芯双人被</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥67.90</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_48.png" />
+						<div class="everybody-infor">
+							<a href="#">甜蜜爱情猫木质多功能化妆品桌面收纳盒</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥15.49</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_50.png" />
+						<div class="everybody-infor">
+							<a href="#">二合一毛球毛刷修剪器</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥22.40</a>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--母婴-->
+		<div class="with-control preference mother list">
+			<div class="title-name">
+				<span></span>
+				<h3>母婴</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							春季必备
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							裙子
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							卫衣
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							妈咪套装
+						</a>
+					</li>
+					<li class="no-border-r">
+						<a href="#">
+							玩具用品
+						</a>
+					</li>
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="mother-goods">
+					<div class="assortment">
+						<a href="#">套装</a>
+						<a href="#">外套</a>
+						<a href="#" class="no-m-r">裤子</a>
+						<a href="#">裙子</a>
+						<a href="#">运动鞋</a>
+						<a href="#" class="no-m-r">孕妇裤</a>
+					</div>
+					<a href="#">
+						<h2>辣妈潮宝</h2></a>
+					<a href="#">
+						<p>品质精选，裸价回馈</p>
+					</a>
+					<img src="img/navgoods_22.png" />
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>小公主</h3></a>
+						<a href="#">
+							<p>赛过小网红</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_90.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>新生儿</h3></a>
+						<a href="#">
+							<p>赛过小天孙</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_91.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>小王子</h3></a>
+						<a href="#">
+							<p>堪比小男神</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_91.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>孕妈</h3></a>
+						<a href="#">
+							<p>美过维多利亚</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_92.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>瘦身变美</h3></a>
+						<a href="#">
+							<p>选这里久对了</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_98.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>童鞋</h3></a>
+						<a href="#">
+							<p>品质有保证</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_97.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>大家都在买</h3>
+					<div class="everybody">
+						<img src="img/body_52.png" />
+						<div class="everybody-infor">
+							<a href="#">孕妇冬装大码孕妇裤加绒加厚孕妇打底裤</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥59.50</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_54.png" />
+						<div class="everybody-infor">
+							<a href="#">正版大头儿子小头爸爸公仔—家毛绒玩具</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥36.00</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_56.png" />
+						<div class="everybody-infor">
+							<a href="#">孕妇秋衣秋裤保暖内衣套装产后月子服</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥49.00</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_58.png" />
+						<div class="everybody-infor">
+							<a href="#">韩妙7D美白素颜霜亮肤懒人霜 保湿补水打底霜</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥78.64</a>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--食品-->
+		<div class="with-control preference foodstuff list">
+			<div class="title-name">
+				<span></span>
+				<h3>食品</h3>
+				<ul>
+					<li class="no-border-r">
+						<strong>热门搜索  :</strong>
+					</li>
+					<li>
+						<a href="#">
+							辣味食
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							巧克力
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							果干蜜饯
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							糖果
+						</a>
+					</li>
+					<li class="no-border-r">
+						<a href="#">
+							肉干肉食
+						</a>
+					</li>
+					<li class="last-child">
+						<a href="#">
+							查看更多 >
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<ul class="preference-goods ">
+				<li class="foodstuff-goods">
+					<div class="assortment">
+						<a href="#">火鸡面</a>
+						<a href="#">饼干</a>
+						<a href="#" class="no-m-r">坚果</a>
+						<a href="#">花草茶</a>
+						<a href="#">糕点</a>
+						<a href="#" class="no-m-r">辣味食</a>
+					</div>
+					<a href="#">
+						<h2>食品</h2></a>
+					<a href="#">
+						<p>1折起囤春游零食</p>
+						<img src="img/navgoods_24.png" /></a>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>零食大礼包</h3></a>
+						<a href="#">
+							<p>爱他，就送零食大礼包</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_102.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>方便速食</h3></a>
+						<a href="#">
+							<p>别说你不爱泡面</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_108.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>休闲零食</h3></a>
+						<a href="#">
+							<p>yo，你的追剧必备</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_103.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>熟食</h3></a>
+						<a href="#">
+							<p>辣味食爱好者入</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_109.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="New-fashion">
+						<a href="#">
+							<h3>茶酒冲饮</h3></a>
+						<a href="#">
+							<p>瘦10斤喝出来</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_104.png" />
+						</div>
+					</div>
+					<div class="New-fashion no-border-b">
+						<a href="#">
+							<h3>养颜滋补</h3></a>
+						<a href="#">
+							<p>由内而外美美美</p>
+						</a>
+						<div class="goodsimg">
+							<img src="img/allgoods_110.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<h3>大家都在买</h3>
+					<div class="everybody">
+						<img src="img/body_60.png" />
+						<div class="everybody-infor">
+							<a href="#">3件30香脆椰子片40*3炭烤椰片椰肉</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥16.10</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_62.png" />
+						<div class="everybody-infor">
+							<a href="#">[口口福6袋坚果大礼包1296g]碧根果</a>
+						</div>
+						<div class="goodsPrice">
+							<a hre59.60</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/body_64.png" />
+						<div class="everybody-infor">
+							<a href="#">买2份送杯子 20包枸杞桂圆红枣茶气血红润</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥36.40</a>
+
+						</div>
+					</div>
+					<div class="everybody">
+						<img src="img/卫龙小面筋辣条美食小吃休闲麻辣食品.png" />
+						<div class="everybody-infor">
+							<a href="#">蘑菇优选&nbsp;甜橙丁香香薰蜡烛&nbsp;进口植物精油</a>
+						</div>
+						<div class="goodsPrice">
+							<a href="#">￥13.67</a>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--猜你喜欢-->
+		<div class="with-control  guess">
+			<div class="title-name">
+				<h3>猜你喜欢</h3>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_good1.png" />
+				<a href="#">
+					<p>韩版宽松茧型短款毛呢外套女纯色翻领呢子外套上衣</p>
+					<div class="goodsInfor">
+						<em>￥59.5</em>
+						<em>￥85.5</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		1190
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_03.png" />
+				<a href="#">
+					<p>春秋薄款外穿打底裤长裤显瘦小脚裤高腰弹力黑色裤铅笔裤大妈黑裤</p>
+					<div class="goodsInfor">
+						<em>￥19.9</em>
+						<em>￥28.43</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		20095
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_07.png" />
+				<a href="#">
+					<p>朵伦韩版新款V领小熊套头毛衣搭纯色长袖衬衫加短裙三件套装</p>
+					<div class="goodsInfor">
+						<em>￥49</em>
+						<em>￥70</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		37852
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_12.png" />
+				<a href="#">
+					<p>歌奈尔秋冬新品韩版纯色百搭显瘦中长款毛呢外套加棉加厚呢大衣</p>
+					<div class="goodsInfor">
+						<em>￥98.99</em>
+						<em>￥141.42</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		41189
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect no-m-r">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_14.png" />
+				<a href="#">
+					<p>太阳的后裔 韩国双色眼影笔高光棒不晕不染珠光大地色卧蚕眼影棒</p>
+					<div class="goodsInfor">
+						<em>￥20.08</em>
+						<em>￥31.39</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		21028
+			    	</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_16.png" />
+				<a href="#">
+					<p>【大地色这都有】哑光丝绒雾面口红不掉色唇膏笔 显白显气质</p>
+					<div class="goodsInfor">
+						<em>￥21</em>
+						<em>￥42</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		33898
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_18.png" />
+				<a href="#">
+					<p>【两色任选】新款灰色弹力牛仔裤小脚哈伦裤高腰弹力宽松九分长裤</p>
+					<div class="goodsInfor">
+						<em>￥49.9</em>
+						<em>￥72.19</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		27550
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_19.png" />
+				<a href="#">
+					<p>杭州正版【四色】冬装韩版背心棉马甲女百搭宽松纯色坎肩外套女</p>
+					<div class="goodsInfor">
+						<em>￥49.91</em>
+						<em>￥71.3</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		33539
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_25.png" />
+				<a href="#">
+					<p>佩妮芬迷你小口红10支套装 小黄鸭\小白兔\小棕熊 滋润保湿</p>
+					<div class="goodsInfor">
+						<em>￥19.8</em>
+						<em>￥36</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		15950
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect no-m-r">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_26.png" />
+				<a href="#">
+					<p>秋季裙子韩版宽松蝙蝠长袖粗线套头毛衣+钩花镂空蕾丝连衣裙</p>
+					<div class="goodsInfor">
+						<em>￥58.8</em>
+						<em>￥84</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		12354
+			    	</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_27.png" />
+				<a href="#">
+					<p>2016冬季新款女装韩版长款棉服女过膝棉衣大码加厚显瘦棉袄</p>
+					<div class="goodsInfor">
+						<em>￥49</em>
+						<em>￥70</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		23437
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_28.png" />
+				<a href="#">
+					<p>牛仔裤女春季2017新款长裤子学生韩版显瘦百搭小脚裤铅笔裤女裤</p>
+					<div class="goodsInfor">
+						<em>￥65</em>
+						<em>￥92086</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		11743
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_29.png" />
+				<a href="#">
+					<p>送护手霜！正版魅惑十色眼影盘珠光哑光大地色桃花妆防水持久眼影盒</p>
+					<div class="goodsInfor">
+						<em>￥19.9</em>
+						<em>￥39.8</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		33135
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_35.png" />
+				<a href="#">
+					<p>明星款超美链条小香风 春新款小方包锁扣单肩包奢华水钻斜挎包</p>
+					<div class="goodsInfor">
+						<em>￥68.99</em>
+						<em>￥98.57</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		21636
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect no-m-r">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_36.png" />
+				<a href="#">
+					<p>明星同款新款系带韩版小清新休闲帆布女学生平地板鞋百搭小白鞋</p>
+					<div class="goodsInfor">
+						<em>￥49</em>
+						<em>￥70</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		60560
+			    	</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_37.png" />
+				<a href="#">
+					<p>品质春夏新款明线修身显瘦仿牛仔裤女小脚裤铅笔打底裤女裤</p>
+					<div class="goodsInfor">
+						<em>￥38.98</em>
+						<em>￥55.60</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		26357
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_38.png" />
+				<a href="#">
+					<p>显瘦半高领针织衫+蝴蝶结v领毛呢高腰背带裤阔腿裤连体裤套装</p>
+					<div class="goodsInfor">
+						<em>￥39.2</em>
+						<em>￥56</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		10815
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_39.png" />
+				<a href="#">
+					<p>【韩范】2016秋季新品纯色宽松毛呢外套中长款西装领呢子大衣外套</p>
+					<div class="goodsInfor">
+						<em>￥147.79</em>
+						<em>￥211.14</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		33889
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_45.png" />
+				<a href="#">
+					<p>【买一送一】韩版双头高光棒阴影修容棒瘦脸立体修容棒</p>
+					<div class="goodsInfor">
+						<em>￥24</em>
+						<em>￥48</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		31476
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect no-m-r">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_46.png" />
+				<a href="#">
+					<p>外穿打底裤加绒秋款九分裤子女士大码高腰显瘦黑色小脚紧身裤</p>
+					<div class="goodsInfor">
+						<em>￥19.9</em>
+						<em>￥24.43</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		9584
+			    	</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_47.png" />
+				<a href="#">
+					<p>秋冬新款韩版西装领短款毛呢外套+纯色直筒八分裤两件套时尚套装</p>
+					<div class="goodsInfor">
+						<em>￥39.9</em>
+						<em>￥57</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		7990
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_48.png" />
+				<a href="#">
+					<p>韩版 厚实款百搭款撞色半高领打底毛衣针织衫女</p>
+					<div class="goodsInfor">
+						<em>￥82.86</em>
+						<!--<em>￥85.5</em>-->
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		13836
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_49.png" />
+				<a href="#">
+					<p>秋冬装韩国明星同款女装加厚毛毛衣服套头上衣毛茸茸卫衣</p>
+					<div class="goodsInfor">
+						<em>￥49</em>
+						<em>￥70</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		12468
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_12.png" />
+				<a href="#">
+					<p>歌奈尔秋冬新品韩版纯色百搭显瘦中长款毛呢外套加棉加厚呢大衣</p>
+					<div class="goodsInfor">
+						<em>￥98.99</em>
+						<em>￥141.42</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		41189
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect no-m-r">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_14.png" />
+				<a href="#">
+					<p>太阳的后裔 韩国双色眼影笔高光棒不晕不染珠光大地色卧蚕眼影棒</p>
+					<div class="goodsInfor">
+						<em>￥20.08</em>
+						<em>￥31.39</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		21028
+			    	</span>
+					</div>
+				</a>
+			</div>
+
+			
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_good1.png" />
+				<a href="#">
+					<p>韩版宽松茧型短款毛呢外套女纯色翻领呢子外套上衣</p>
+					<div class="goodsInfor">
+						<em>￥59.5</em>
+						<em>￥85.5</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		1190
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_03.png" />
+				<a href="#">
+					<p>春秋薄款外穿打底裤长裤显瘦小脚裤高腰弹力黑色裤铅笔裤大妈黑裤</p>
+					<div class="goodsInfor">
+						<em>￥19.9</em>
+						<em>￥28.43</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		20095
+			    	</span>
+					</div>
+				</a>
+			</div>
+			
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_07.png" />
+				<a href="#">
+					<p>朵伦韩版新款V领小熊套头毛衣搭纯色长袖衬衫加短裙三件套装</p>
+					<div class="goodsInfor">
+						<em>￥49</em>
+						<em>￥70</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		37852
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_12.png" />
+				<a href="#">
+					<p>歌奈尔秋冬新品韩版纯色百搭显瘦中长款毛呢外套加棉加厚呢大衣</p>
+					<div class="goodsInfor">
+						<em>￥98.99</em>
+						<em>￥141.42</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		41189
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect no-m-r">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_14.png" />
+				<a href="#">
+					<p>太阳的后裔 韩国双色眼影笔高光棒不晕不染珠光大地色卧蚕眼影棒</p>
+					<div class="goodsInfor">
+						<em>￥20.08</em>
+						<em>￥31.39</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		21028
+			    	</span>
+					</div>
+				</a>
+			</div>
+    
+            <div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_37.png" />
+				<a href="#">
+					<p>品质春夏新款明线修身显瘦仿牛仔裤女小脚裤铅笔打底裤女裤</p>
+					<div class="goodsInfor">
+						<em>￥38.98</em>
+						<em>￥55.60</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		26357
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_38.png" />
+				<a href="#">
+					<p>显瘦半高领针织衫+蝴蝶结v领毛呢高腰背带裤阔腿裤连体裤套装</p>
+					<div class="goodsInfor">
+						<em>￥39.2</em>
+						<em>￥56</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		10815
+			    	</span>
+					</div>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_39.png" />
+				<a href="#">
+					<p>【韩范】2016秋季新品纯色宽松毛呢外套中长款西装领呢子大衣外套</p>
+					<div class="goodsInfor">
+						<em>￥147.79</em>
+						<em>￥211.14</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		33889
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_45.png" />
+				<a href="#">
+					<p>【买一送一】韩版双头高光棒阴影修容棒瘦脸立体修容棒</p>
+					<div class="goodsInfor">
+						<em>￥24</em>
+						<em>￥48</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		31476
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect no-m-r">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_46.png" />
+				<a href="#">
+					<p>外穿打底裤加绒秋款九分裤子女士大码高腰显瘦黑色小脚紧身裤</p>
+					<div class="goodsInfor">
+						<em>￥19.9</em>
+						<em>￥24.43</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		9584
+			    	</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_47.png" />
+				<a href="#">
+					<p>秋冬新款韩版西装领短款毛呢外套+纯色直筒八分裤两件套时尚套装</p>
+					<div class="goodsInfor">
+						<em>￥39.9</em>
+						<em>￥57</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		7990
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_48.png" />
+				<a href="#">
+					<p>韩版 厚实款百搭款撞色半高领打底毛衣针织衫女</p>
+					<div class="goodsInfor">
+						<em>￥82.86</em>
+						<!--<em>￥85.5</em>-->
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		13836
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_49.png" />
+				<a href="#">
+					<p>秋冬装韩国明星同款女装加厚毛毛衣服套头上衣毛茸茸卫衣</p>
+					<div class="goodsInfor">
+						<em>￥49</em>
+						<em>￥70</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		12468
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_12.png" />
+				<a href="#">
+					<p>歌奈尔秋冬新品韩版纯色百搭显瘦中长款毛呢外套加棉加厚呢大衣</p>
+					<div class="goodsInfor">
+						<em>￥98.99</em>
+						<em>￥141.42</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		41189
+			    	</span>
+					</div>
+				</a>
+			</div>
+			<div class="guess-goods effect no-m-r">
+				<span class="resemble">找相似</span>
+				<img src="img/guess_14.png" />
+				<a href="#">
+					<p>太阳的后裔 韩国双色眼影笔高光棒不晕不染珠光大地色卧蚕眼影棒</p>
+					<div class="goodsInfor">
+						<em>￥20.08</em>
+						<em>￥31.39</em>
+						<span class="collect">
+			    		<i class="iconfont">&#xe623;</i>
+			    		21028
+			    	</span>
+					</div>
+				</a>
+			</div>
+
+    
+    
+		</div>
+
+		<!--底部-->
+		<div class="with-control foot">
+			<div class="helper">
+				<div class="noviciate">
+					<h4>-新手帮助-</h4>
+					<ul>
+						<li>
+							<a href="#">常见问题</a>
+						</li>
+						<li>
+							<a href="#">自助服务</a>
+						</li>
+						<li>
+							<a href="#">联系客服</a>
+						</li>
+						<li>
+							<a href="#">意见反馈</a>
+						</li>
+					</ul>
+				</div>
+				<div class="noviciate">
+					<h4>-权益保障-</h4>
+					<ul>
+						<li>
+							全国包邮
+						</li>
+						<li>
+							7天无理由退货
+						</li>
+						<li>
+							退货运费补贴
+						</li>
+						<li>
+							限时发货
+						</li>
+					</ul>
+				</div>
+				<div class="noviciate">
+					<h4>-支付方式-</h4>
+					<ul>
+						<li>
+							微信支付
+						</li>
+						<li>
+							支付宝
+						</li>
+						<li>
+							白付美支付
+						</li>
+
+					</ul>
+				</div>
+				<div class="noviciate download">
+					<h4>-移动客户端下载-</h4>
+					<ul>
+						<li>
+							蘑菇街
+							<div class="code">
+								<img src="img/code1.png" />
+							</div>
+
+						</li>
+						<li>
+							美丽说
+							<div class="code">
+								<img src="img/code2.png" />
+							</div>
+						</li>
+						<li>
+							uni引力
+							<div class="code">
+								<img src="img/code3.png" />
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="otherFooter">
+				<p>
+					<a href="#">美丽说</a>
+					<a href="#">蘑菇街游戏</a>
+					<a href="#">淘粉吧</a>
+					<a href="#">穿衣搭配</a>
+					<a href="#">秋季女装新款</a>
+					<a href="#">秋季连衣裙长袖</a>
+					<a href="#">秋季孕妇装</a>
+					<a href="#">QQ钱包</a>
+					<a href="#">时尚品牌网</a>
+					<a href="#">装修</a>
+					<a href="#">背带裤搭配</a>
+					<a href="#">衣联网</a>
+					<a href="#">播视网视频</a>
+					<a href="#">慧聪网</a>
+					<a href="#">衬衫搭配</a>
+					<a href="#">牛仔外套搭配图片</a>
+					<a href="#">冬装时尚搭配</a>
+					<a href="#">针织衫搭配</a>
+					<a href="#">牛仔衣搭配</a>
+					<a href="#">风衣搭配</a>
+					<a href="#">补水面膜排行榜</a>
+					<a href="#">爱蘑菇街</a>
+				</p>
+			</div>
+			<div class="sellerInfor">
+				<ul>
+					<li>
+						<a href="#">关于我们</a>
+					</li>
+					<li>
+						<a href="#">招聘信息</a>
+					</li>
+					<li>
+						<a href="#">联系我们</a>
+					</li>
+					<li>
+						<a href="#">商家入驻</a>
+					</li>
+					<li>
+						<a href="#">商家后台</a>
+					</li>
+					<li>
+						<a href="#">蘑菇商学院</a>
+					</li>
+					<li>
+						<a href="#">商家社区</a>
+					</li>
+				</ul>
+				<p class="hostname">@2017 Mogujie.com 杭州卷瓜网络有限公司</p>
+			</div>
+			<div class="licence">
+				<ul>
+					<li>
+						<span>营业执照注册号：</span>
+						<a href="#">330106000129004</a>
+					</li>
+					<li>
+						<span>网络文化经营许可证：</span>
+						<a href="#">浙网文(2016)0349-219</a>
+					</li>
+					<li>
+						<span>增值电信业务经营许可证：</span>
+						<a href="#">浙B2-20110349</a>
+					</li>
+					<li>
+						<a href="#">安全责任书</a>
+					</li>
+					<li>
+						<a href="#">浙公网安备33010602002329</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+	<!--<script type="text/javascript" src="js/myQuery.js" ></script>-->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/myjs.js"></script>
+	<script type="text/javascript">
+		//猜你喜欢
+		$('.effect').each(function(i, elem) {
+				$(elem).mouseover(function() {
+						$(elem).css('border-color', 'red');
+						$(elem).find($('.resemble')).show()
+					}) /
+					$(elem).mouseout(function() {
+						$(elem).css('border-color', '');
+						$(elem).find($('.resemble')).hide()
+					})
+			})
+			//移动客户端下载二维码
+		$('.download').find($('li')).each(function(i, elem) {
+				$(elem).mouseover(function() {
+					$('.code').hide()
+					$(elem).find($('.code')).show()
+				})
+				$(elem).mouseout(function() {
+					$('.code').hide()
+						//				$(elem).find($('.code')).show()
+				})
+			})
+			//购物车
+		$('.fr').find($('a')).eq(3).mouseover(function() {
+			$('.trolley').show()
+		})
+		$('.fr').find($('a')).eq(3).mouseout(function() {
+				$('.trolley').hide()
+			})
+			//客户服务
+					$('.fr').find($('a')).eq(4).mouseover(function(){
+						    $('.serve').show(); 
+//						    return false
+					})
+						$('.fr').find($('a')).eq(4).mouseout(function(){
+						    $('.serve').hide(); 
+//						    return false
+					})
+
+		//侧边导航
+		$(document).scroll(function() {
+			$('.list').each(function(i, elem) {
+				var t = $(elem).offset().top - $(document).scrollTop();
+				if(t < 200) {
+					$('#navigation').show();
+					$('.nav').removeClass('active');
+					$('.nav').eq(i).addClass('active');
+				}
+			})
+			if($(document).scrollTop() < 400) {
+				$('#navigation').hide();
+			}
+		})
+		$('.nav').each(function(i, elem) {
+			$(elem).click(function() {
+				$('li').removeClass('active');
+				$(elem).addClass('active');
+				$(document).scrollTop(900 + 470 * i)
+			})
+		})
+
+		$('#back').click(function() {
+			$('li').removeClass('active')
+			$('#back').addClass('active')
+			clearInterval(timer)
+			var timer = setInterval(function() {
+				$('#back').removeClass('active')
+				var h = $(document).scrollTop()
+				h -= 100;
+				$(document).scrollTop(h);
+				if(h <= 0) {
+					clearInterval(timer)
+				}
+				if(h < 200) {
+					$('#navigation').hide()
+				}
+			}, 80)
+		})
+
+		//轮播
+		var arrImg = ['img/sclid1.png', 'img/sclid2.png', 'img/sclid3.png', 'img/sclid6.png', 'img/sclid5.png', 'img/sclid4.png'];
+		var arrColor = ['#ebeda8', '#f5c9ca', '#d9e2f1', '#fae6d5', '#e9decc', '#9aaaf6']
+		$('.navNumber li').mouseover(function() {
+			clearInterval(timer);
+			var _index = $(this).index();
+			num = _index;
+			slide(_index)
+		})
+
+		$('.navNumber li').on('mouseout', function() {
+			timer = setInterval(function() {
+				num++;
+				if(num >= $('.navNumber li').length) {
+					num = 0;
+				}
+				slide(num)
+			}, 2000)
+		})
+
+		var num = 0;
+		var timer = setInterval(function() {
+			num++;
+			if(num >= $('.navNumber li').length) {
+				num = 0;
+			}
+			slide(num)
+		}, 2000)
+
+		function slide(n) {
+			$('.wheel img').attr('src', arrImg[n]);
+			$('.full-width.bg').css('background', arrColor[n])
+			$('.navNumber li').removeClass('active');
+			$('.navNumber li').eq(n).addClass('active');
+		}
+
+		//红人穿搭
+		var s=true;
+		var num1=0;
+	setInterval(function(){
+			$('.dress-goods').eq(num1%5).each(function(i, elem) {
+							$(elem).attr('class', 'dress-goods rotate');
+							$(elem).find('img').attr('src', 'img/style7.png');
+							$(elem).find('a').css('webkitTransform', 'rotateY(180deg)');
+							$(elem).find('a').html('上衣x牛仔裤');
+			
+				})
+			num1++;
+			if(num1==5){
+				num1=0
+			}
+},3000)
+		
+		
+		//精选专题
+		  $('.identifier').find('li').each(function(i,elem){
+		  	 $(elem).mouseover(function(){
+		  	 	$('.identifier').find('li').css('background','')
+		  	 	$(elem).css('background','pink')
+		  	 })
+		  })
+		  
+		$('.mtop').click(function(){
+			$(document).scrollTop(0)
+		})
+	</script>
+	
+
+
+</html>
